@@ -30,7 +30,7 @@
                    Foreground="Black" 
                    Background="CornflowerBlue"
                    TextAlignment="Right">
-                    <Run Text="Welcome"/>
+                   <Run Text="Welcome"/>
                    <Run Text="{Binding PassedParameter, Mode=OneWay}"/>
                    <Run Text="         "/>
         </TextBlock>
@@ -41,13 +41,12 @@
                     Background="White">
             <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button FontSize="18" 
-                Content="Meter to Feet" 
-                Command="{Binding GoMainView, Mode=OneTime}"                       
-             
-                        Width="199"/>
-                <Button FontSize="18" 
-                       
-                Content="Feet to Meter" 
+                    Content="Meter to Feet" 
+                    Command="{Binding GoMainView, Mode=OneTime}"                    
+                    Width="199"/>
+                
+                <Button FontSize="18"                        
+                        Content="Feet to Meter" 
                         Width="199" />
             </StackPanel>
             <TextBlock Margin="10,30,10,10"
@@ -58,6 +57,7 @@
             <TextBox 
                  FontSize="20" 
                  Margin="30,0,85,0" 
+                 Text="{Binding InputValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                  TextAlignment="Left" />
             <TextBlock  Margin="10,40,10,10"
                    FontSize="18" 
@@ -67,6 +67,7 @@
             <TextBox  
                   FontSize="20" 
                   Margin="30,0,85,0" 
+                  Text="{Binding ConvertToValue, Mode=OneWay}"
                   TextAlignment="Left"/>
         </StackPanel>
     </Grid>

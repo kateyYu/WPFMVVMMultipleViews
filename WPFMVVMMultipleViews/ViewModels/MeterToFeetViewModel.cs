@@ -59,8 +59,36 @@ namespace WPFMVVMMultipleViews.ViewModels
 
         #endregion
 
-        #region Calc
+        #region Properties
+        private double _inputValue = 1;
 
+        public double InputValue
+        {
+            get { return _inputValue; }
+            set
+            {
+                SetProperty(ref _inputValue, value);
+                Calc();
+            }
+        }
+
+        private double _convertToValue = METER_FEET;
+
+        public double ConvertToValue
+        {
+            get { return _convertToValue; }
+            set
+            {
+                SetProperty(ref _convertToValue, value);
+            }
+        }
+        #endregion
+
+        #region Calc
+        public void Calc()
+        {
+            ConvertToValue = InputValue * METER_FEET;
+        }
         #endregion
     }
 }

@@ -7,6 +7,7 @@ namespace WPFMVVMMultipleViews.ViewModels
 {
     public class FeetToMeterViewModel : BaseViewModel, INavigatedToAware
     {
+        const double METER_FEET = 3.28;
         #region Fields
 
         private readonly INavigationManager _navigationManager;
@@ -21,6 +22,7 @@ namespace WPFMVVMMultipleViews.ViewModels
         }
 
         #endregion
+
         #region PassedParameter
 
         private string _passedParameter;
@@ -32,6 +34,7 @@ namespace WPFMVVMMultipleViews.ViewModels
         }
 
         #endregion
+
         #region GoMainView
 
         private ICommand _goMainView;
@@ -55,6 +58,37 @@ namespace WPFMVVMMultipleViews.ViewModels
             PassedParameter = (string)arg;
         }
 
+        #endregion
+        #region Properties
+        private double _inputValue = METER_FEET;
+
+        public double InputValue
+        {
+            get { return _inputValue; }
+            set
+            {
+                SetProperty(ref _inputValue, value);
+                Calc();
+            }
+        }
+
+        private double _convertToValue = 1;
+
+        public double ConvertToValue
+        {
+            get { return _convertToValue; }
+            set
+            {
+                SetProperty(ref _convertToValue, value);
+            }
+        }
+        #endregion
+
+        #region Calc
+        public void Calc()
+        {
+            ConvertToValue = InputValue / METER_FEET;
+        }
         #endregion
     }
 }

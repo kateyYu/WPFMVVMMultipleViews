@@ -41,12 +41,12 @@
                     Background="White">
             <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button FontSize="18" 
-                Content="Meter to Feet" 
-                Focusable="True" 
+                        Content="Meter to Feet" 
+                        Focusable="True" 
                         Width="199"/>
                 <Button FontSize="18" 
-                Command="{Binding GoMainView, Mode=OneTime}" 
-                Content="Feet to Meter" 
+                        Command="{Binding GoMainView, Mode=OneTime}" 
+                        Content="Feet to Meter" 
                         Width="199" />
             </StackPanel>
             <TextBlock Margin="10,30,10,10"
@@ -57,6 +57,7 @@
             <TextBox 
                  FontSize="20" 
                  Margin="30,0,85,0" 
+                 Text="{Binding InputValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                  TextAlignment="Left" />
             <TextBlock  Margin="10,40,10,10"
                    FontSize="18" 
@@ -66,6 +67,7 @@
             <TextBox  
                   FontSize="20" 
                   Margin="30,0,85,0" 
+                  Text="{Binding ConvertToValue, Mode=OneWay}"
                   TextAlignment="Left"/>
         </StackPanel>
     </Grid>
