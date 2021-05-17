@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace WPFMVVMMultipleViews.Constants
+﻿namespace WPFMVVMMultipleViews.Constants
 {
     public static class NavigationKeys
     {

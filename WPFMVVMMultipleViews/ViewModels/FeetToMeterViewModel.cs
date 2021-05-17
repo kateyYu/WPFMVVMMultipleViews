@@ -59,6 +59,7 @@ namespace WPFMVVMMultipleViews.ViewModels
         }
 
         #endregion
+
         #region Properties
         private double _inputValue = METER_FEET;
 

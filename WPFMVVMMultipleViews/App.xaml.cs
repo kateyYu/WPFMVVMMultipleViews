@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Egor92.MvvmNavigation;
+using Egor92.MvvmNavigation.Abstractions;
 using System.Windows;
-using WPFMVVMMultipleViews.Views;
 using WPFMVVMMultipleViews.Constants;
 using WPFMVVMMultipleViews.ViewModels;
-using Egor92.MvvmNavigation;
-using Egor92.MvvmNavigation.Abstractions;
+using WPFMVVMMultipleViews.Views;
 
 namespace WPFMVVMMultipleViews
 {

@@ -43,7 +43,7 @@
                 <Button FontSize="18" 
                         Content="Meter to Feet" 
                         Focusable="True" 
-                        Width="199"/>
+                        Width="199" Cursor="Arrow"/>
                 <Button FontSize="18" 
                         Command="{Binding GoMainView, Mode=OneTime}" 
                         Content="Feet to Meter" 
